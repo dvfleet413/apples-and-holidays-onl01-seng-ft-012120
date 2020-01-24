@@ -72,7 +72,7 @@ def all_supplies_in_holidays(holiday_hash)
     holdays_hashes.each do |holiday, supplies_array|
       puts " #{holiday.to_s.split("_").map(&:capitalize).join(' ')}: "
       supplies_array.each do |supply|
-        supply == supplies_array.last ? (puts "#{supply}\n") : (puts "#{supply}, ")
+        supply == supplies_array.last ? (puts "  #{holiday.to_s.split("_").map(&:capitalize).join(' ')}: #{supply}\n") : (puts "  #{holiday.to_s.split("_").map(&:capitalize).join(' ')}: #{supply}, ")
       end
     end
   end
